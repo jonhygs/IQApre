@@ -204,19 +204,6 @@ def nivel_de_qualidade(IQA_total):
 
 workbook = xlrd.open_workbook('2017.xls')#dados necessários para o pré processamento, para o rio grande o processo é o mesmo
 worksheet = workbook.sheet_by_index(0)#primeira página do arquivo
-#arquivos .txt onde irei guardar os resultados
-IQA = open('IQA.txt', 'w')
-oxi = open('Oxigenio_DissolvidoD.txt', 'w')
-Cf = open('CFD.txt', 'w')
-ph = open('phD.txt','w')
-dbo = open('dboD.txt', 'w')
-nitrato = open('nitratoD.txt','w')
-tur = open('turbidezD.txt', 'w')
-fos = open('fosfatoD.txt','w')
-st = open('Solidos_TotaisD.txt','w')
-iqa = open('iqaD.txt','w')
-qualidade = open('qualidadeD.txt','w')
-tmpD = open('tempD.txt','w')
 
 IQA_tmp = str(92)#o IQA para a agua é constante
 var_tem = 92
@@ -307,9 +294,9 @@ for row_num in xrange(worksheet.nrows):
     tur.write(turb + "\n")
     IQA.write(  turb + " ")
 
-    ##  7 ##################fosforo################
+    ##  7 ##################fosfato################
 
-    PO = row[5] #preciso de uma base de dados para o fosfato
+    PO = row[5] 
 
     print "fosfato ", PO
     fosfa = round(Fosfato(PO),2)
