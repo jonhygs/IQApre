@@ -1,4 +1,3 @@
-Trabalho classificação do IQA (Índice de Qualidade da Água) utilizando redes Neurais Artificiais.
+Trabalho classificação do IQA (Índice de Qualidade da Água) utilizando redes Neurais Artificiais e AD.
 
-O trabalho foi implementado em python, usando a biblioteca Pybrain.
 
